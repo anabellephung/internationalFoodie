@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="favicon_io/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Pacifico&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/ad4f31f59a.js" crossorigin="anonymous"></script>
+  <title>Top 10 Restaurants in Best Food Cities 2020 - Zomato API Project</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <header>
+    <div class="wrapper">
+      <div class="headerText">
+        <h1>International Foodie</h1>
+        <p>Discover the Best Restaurants Across the World!</p>
+        <button id="showGallery">Let's Explore</button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="cityGallery">
+      <div class="wrapper">
+        <div class="container">
+          <h2 class="cityHeader">Choose Your City</h2>
+          <ul>
+            <div class="row">
+              <!-- BEIRUT -->
+              <li class="city" value="Beirut">
+                <div class="overlay"></div>
+                <h3>Beirut, <span>Lebanon</span></h3>
+              </li>
+              <!-- CHARLESTON -->
+              <li class="city" value="Charleston">
+                <div class="overlay"></div>
+                <h3>Charleston, <span>South Carolina</span></h3>
+              </li>
+              <!-- CHICAGO -->
+              <li class="city" value="Chicago">
+                <div class="overlay"></div>
+                <h3>Chicago, <span>Illinois</span></h3>
+              </li>
+            </div>
+            <div class="row">
+              <!-- KUALA LUMPUR -->
+              <li class="city" value="Kuala Lumpur">
+                <div class="overlay"></div>
+                <h3>Kuala Lumpar, <span>Malaysia</span></h3>
+              </li>
+              <!-- LOS ANGELES -->
+              <li class="city" value="Los Angeles">
+                <div class="overlay"></div>
+                <h3>Los Angeles, <span>California</span></h3>
+              </li>
+              <!-- NEW ORLEANS -->
+              <li class="city" value="New Orleans">
+                <div class="overlay"></div>
+                <h3>New Orleans, <span>Louisiana</span></h3>
+              </li>
+            </div>
+            <div class="row">
+              <!-- NEW YORK CITY -->
+              <li class="city" value="New York City">
+                <div class="overlay"></div>
+                <h3>New York City, <span>New York</span></h3>
+              </li>
+              <!-- SINGAPORE -->
+              <li class="city" value="Singapore">
+                <div class="overlay"></div>
+                <h3>Singapore, <span>Singapore</span></h3>
+              </li>
+              <!-- TORONTO -->
+              <li class="city" value="Toronto">
+                <div class="overlay"></div>
+                <h3>Toronto, <span>Canada</span></h3>
+              </li>
+            </div>
+          </ul>
+        </div>
+      </div>  
+    </section>
+    
+    <section class="cityRestaurants">
+      <div class="wrapper">
+        <div class="container">
+          <h3 class="cityTitle"></h3>
+          <div class="listContainer">
+            <div class="preload">
+              <span class="fas fa-utensils"></span>
+            </div>
+            <ul class="restaurantList">
+              <!-- Where 'top 10 restaurants' will dynamically append when chosen city is clicked -->
+            </ul>
+          </div>
+          <button class="anotherCity" id="anotherCity">Choose another city</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="restaurantInfo">
+      <div class="wrapper">
+        <div class="restaurantDetails">
+          <!-- Where a restaurant, chosen above ('on click'), will dynamically append it's details -->
+        </div>
+      </div>
+    </section>
+    
+  <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"
+    integrity="sha512-DZqqY3PiOvTP9HkjIWgjO6ouCbq+dxqWoJZ/Q+zPYNHmlnI2dQnbJ5bxAHpAMw+LXRm4D72EIRXzvcHQtE8/VQ=="
+    crossorigin="anonymous"></script>
+  <script src='./scripts.js'></script>
+</body>
+</html>
