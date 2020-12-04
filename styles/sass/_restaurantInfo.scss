@@ -1,0 +1,43 @@
+.restaurantInfo {
+  .restaurantDetails {
+    min-height: 70vh;
+    @include flex-center-column-around;
+  }
+
+  h4 {
+    font-size: clamp(3.5rem, 3vw, 5.5rem);
+    margin-bottom: 10px;
+  }
+
+  .anotherRestaurant {
+    margin-top: 10px;
+  }
+
+  .detailsContainer {
+    height: 525px;
+    width: 400px;
+    max-width: 100%;
+    padding: 20px;
+    background-color: $primary-light;
+    border: 10px solid $burnt-sienna;
+    box-shadow: 0px 0px 5px 5px #0a0a0a;
+    @include flex-start-column-even;
+
+    p {
+      font-size: clamp(2rem, 3vw, 2.5rem);
+    }
+
+    .specialStyling {
+      font-weight: $bold;
+      text-decoration: underline;
+    }
+  }
+
+  .imgBox {
+    box-shadow: 0px 0px 0px 1px #0a0a0a;
+  }
+}
+
+.flexRestaurant {
+  @include flex-center-column-even;
+}

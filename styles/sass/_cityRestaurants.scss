@@ -1,0 +1,65 @@
+.cityRestaurants {
+  .container {
+    min-height: 100vh;
+    @include flex-center-column-even;
+  }
+
+  h3 {
+    font-size: clamp(2.8rem, 3vw, 4.8rem);
+    margin-bottom: 10px;
+    text-decoration: underline;
+  }
+
+  h4 {
+    font-size: clamp(1.8rem, 3vw, 2.1rem);
+    color: $primary-dark;
+    filter: drop-shadow(0 0 0.2rem #493737);
+  }
+
+  p {
+    font-size: clamp(1.3rem, 3vw, 1.5rem);
+    font-weight: $bold;
+  }
+
+  .listContainer {
+    position: relative;
+    max-width: 100%;
+    width: 475px;
+    height: 600px;
+    padding: 20px;
+    background-color: $burnt-sienna;
+    @include flex-center-column;
+    box-shadow: 0px 0px 5px 5px $primary-dark;
+  }
+
+  .restaurantList {
+    overflow-y: auto;
+  }
+
+  .restaurant {
+    cursor: pointer;
+    background-color: $primary-light;
+    border-bottom: 1px solid $primary-dark;
+    border-left: 1px solid $primary-dark;
+    border-right: 1px solid $primary-dark;
+    padding: 0 10px;
+    transition: filter 0.1s ease-in-out;
+
+    &:first-child {
+      border-top: 1px solid $primary-dark;
+    }
+
+    &:last-child {
+      border-bottom: 1px solid $primary-dark;
+    }
+
+    &:hover,
+    &:focus {
+      filter: drop-shadow(0 0 0.2rem $primary-dark);
+    }
+  }
+
+  #anotherCity {
+    margin-top: 10px;
+  }
+}

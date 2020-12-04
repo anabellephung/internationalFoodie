@@ -1,0 +1,53 @@
+header {
+  background: url(assets/headerBgImg.webp) no-repeat center;
+  background-size: cover;
+  @include flex-center-column-center;
+  text-align: center;
+
+  .headerText {
+    height: 300px;
+    padding: 20px;
+    border: 1px solid $primary-dark;
+    background-color: #0a0a0aab;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  h1 {
+    font-size: clamp(4rem, 7vw, 7rem);
+  }
+
+  @supports (-webkit-text-stroke: 1px $light-orange) {
+    h1 {
+      -webkit-text-stroke: 1px $light-orange;
+      -webkit-text-fill-color: $light-orange;
+    }
+  }
+
+  p {
+    font-size: clamp(1.8rem, 3vw, 3rem);
+    font-weight: $bold;
+    letter-spacing: 3px;
+    color: $primary-light;
+  }
+
+  button {
+    &::before,
+    &::after {
+      font-family: "Font Awesome 5 Free"; 
+      font-weight: 900;
+      content: "\f2e7";
+      color: $burnt-sienna;
+    }
+
+    &::before {
+      margin-right: 5px;
+    }
+
+    &::after {
+      margin-left: 5px;
+    }
+  }
+}
