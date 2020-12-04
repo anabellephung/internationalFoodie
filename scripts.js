@@ -1,5 +1,6 @@
 const restaurantApp = {};
-restaurantApp.apiKey = 'f2af26c3d6f76bd1f3cc5cba0be539fa';
+restaurantApp.zomatoKey = 'f2af26c3d6f76bd1f3cc5cba0be539fa';
+restaurantApp.bingKey = 'AkrC5wUFPCuXGJpXV_sXuaioALJ-HFe5DgvM0UknbM-jWF-S0zllwC1APu6UDYcV';
 
 // Hide header and show city gallery
 $('#showGallery').click(function () {
@@ -13,7 +14,7 @@ restaurantApp.getCityRestaurants = async function(city) {
   try {
     const res = await axios.get(`https://developers.zomato.com/api/v2.1/locations?query=${city}&count=1`, {
       headers: {
-        'user-key': restaurantApp.apiKey
+        'user-key': restaurantApp.zomatoKey
       }
     });
 
@@ -21,7 +22,7 @@ restaurantApp.getCityRestaurants = async function(city) {
 
     const res2 = await axios.get(`https://developers.zomato.com/api/v2.1/search?entity_id=${cityId}&entity_type=city&q=${city}&count=10&sort=rating&order=desc`, {
       headers: {
-        'user-key': restaurantApp.apiKey
+        'user-key': restaurantApp.zomatoKey
       }
     })
       // returns an array of restaurants of chosen city
@@ -67,8 +68,14 @@ restaurantApp.displayRestaurants = function(restaurantList) {
         // if id from API === value appended onto each restaurant
         if (val === resId) {
           const thisRestaurant = restaurant.restaurant;
+          console.log(thisRestaurant)
           const img = restaurant.restaurant.featured_image;
           const imgLength = img.length;
+          // const lat = thisRestaurant.location.latitude;
+          // const lon = thisRestaurant.location.longitude;
+
+          // const res = axios.get
+          //   (`https://dev.virtualearth.net/REST/v1/Imagery/Map/Road/${lat},${lon}/18?mapSize=500,500&pp=47.645523,-122.139059;66&mapLayer=Basemap,Buildings&key=${restaurantApp.bingKey}`)
 
           const restoToDisplay = `
             <h4>${thisRestaurant.name}</h4>
