@@ -14,31 +14,38 @@
 
 @media (max-width: 570px) {
   .cityGallery {
+    .row {
+      flex-direction: column;
+    }
+
     li {
-      width: 115px;
-      height: 115px;
-      margin: 10px;
+      width: 300px;
+      height: 57px;
+      margin: 5px;
 
       h3 {
-        font-size: 1rem;
-        width: 100px;
+        font-size: 1.2rem;
+        width: 190px;
+      }
+
+      span {
+        display: inline-block;
       }
     }
   }
 }
 
 
-@media (max-width: 404px) {
-    .cityGallery {
-    li {
-      width: 97px;
-      height: 97px;
-      margin: 5px;
+@media (max-height: 709px) {
+  .cityRestaurants {
+    .listContainer {
+      height: 510px;
+    }
+  }
 
-      h3 {
-        font-size: 0.8rem;
-        width: 83px;
-      }
+  .restaurantInfo {
+    .detailsContainer {
+      height: 450px;
     }
   }
 }

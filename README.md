@@ -11,6 +11,3 @@ API & jQuery Project created using Zomato API ('https://developers.zomato.com/')
 <!-- New York City: Photo by Vlad Alexandru Popa from Pexels -->
 <!-- Los Angeles: Photo by Vinicius Maciel from Pexels -->
 <!-- Chicago: Photo by Bhargava Marripati from Pexels -->
-
-<!-- Code Reference -->
-<!-- https://stackoverflow.com/questions/487056/retrieve-button-value-with-jquery/9772680 -->
