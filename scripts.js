@@ -3,7 +3,7 @@ restaurantApp.zomatoKey = 'f2af26c3d6f76bd1f3cc5cba0be539fa';
 restaurantApp.bingKey = 'AkrC5wUFPCuXGJpXV_sXuaioALJ-HFe5DgvM0UknbM-jWF-S0zllwC1APu6UDYcV';
 
 // Hide header and show city gallery
-$('#showGallery').click(function () {
+$('#showGallery').on('click', function () {
   $('header').fadeOut(600, 'linear', function () {
     $('.cityGallery').fadeIn();
   })
@@ -59,7 +59,7 @@ restaurantApp.displayRestaurants = function(restaurantList) {
       $('.restaurantList').append(restoListToAppend);
 
       // can then click on specific restaurant and will display specifics
-      $('.restaurant').click(function () {
+      $('.restaurant').on('click', function () {
         const val = $(this).attr("value");
         $('.cityRestaurants').fadeOut(800, 'linear', function () {
           $('.restaurantInfo').addClass('flexRestaurant').fadeIn(1000);
@@ -132,7 +132,7 @@ restaurantApp.displayRestaurants = function(restaurantList) {
 
 restaurantApp.init = (function () {
   // on click of city, promise will render restaurant list
-  $('.city').click(function () {
+  $('.city').on('click', function () {
     const city = $(this).attr("value");
     $('.cityGallery').fadeOut(800, 'linear', function () {
       $('.restaurantList').empty();
